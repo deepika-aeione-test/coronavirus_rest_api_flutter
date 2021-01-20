@@ -1,0 +1,14 @@
+@baseUrl  = https://gateway.nubentos.com:443
+@authorization = eW5RN05xRnFKWmoxVlg3MnFaVjFYS1NHazdBYTo4c2VmYUg3Z2N2YlpIVnFQd09NT3pOam1YMm9h
+
+#used to get an access token given an authorization key
+Send Request
+POST {{baseUrl}}/token?grant_type=client_credentials
+Authorization: Basic {{authorization}}
+
+###
+
+Send Request
+GET {{https://gateway.nubentos.com:443}}/t/nubentos.com/ncovapi/2.0.0/cases
+Accept: application/json
+Authorization: Bearer {{accessToken}}
